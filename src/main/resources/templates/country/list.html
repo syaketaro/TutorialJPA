@@ -16,7 +16,17 @@
             <td th:text="${data.code}"></td>
             <td th:text="${data.name}"></td>
             <td th:text="${data.population}"></td>
+            <td><a th:href="@{/country/detail/{code}/(code=${data.code})}">詳細</a></td>
+            <td><a th:href="@{/country/delete/{code}/(code=${data.code})}">削除</a></td>
+        <!-- <a th:href="@{/country/list/}">一覧に戻る</a> -->
+        <!-- <p><a th:href="@{/input/(previous=${previous})}">入力画面へ戻る</a></p> -->
         </tr>
     </table>
 </body>
 </html>
+
+<!-- 
+コードのリンクについて現在画面上で表示しているコード項目を呼び出す記述と
+              青木様がリンクの実装をされたコード項目を呼び出す記述の箇所とを見比べていただけますでしょうか？
+恐らくですが、リンクの方には不足している記述があるかと思いますよ。 
+-->
