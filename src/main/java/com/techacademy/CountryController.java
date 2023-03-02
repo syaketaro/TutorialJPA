@@ -27,7 +27,7 @@ public class CountryController {
     public String getCountry(@PathVariable(name = "code", required = false) String code, Model model) {
     	Country country = code != null ? service.getCountry(code) : new Country();
     	model.addAttribute("country", country);
-    	model.addAttribute("code", code);
+    	//model.addAttribute("code", code);
     	return "country/detail";
     }
     
